@@ -21,5 +21,4 @@ public class PancakeHouseMenu {
 		MenuItem item = new MenuItem(name, description, vegetarian, price);
 		menu.add(item);
 	}
-
 }
