@@ -13,12 +13,16 @@ public class PancakeHouseMenu {
 		addItem("Regular Waffle Breakfast", "Waffles with blueberries and strawberries", true, 3.50);
 	}
 
-	public ArrayList<MenuItem> getMenu(){
-		return menu;
+	public PancakeHouseMenuIterator createIterator(){
+		return new PancakeHouseMenuIterator(menu);
 	}
 	
 	public void addItem(String name, String description, boolean vegetarian, double price){
 		MenuItem item = new MenuItem(name, description, vegetarian, price);
 		menu.add(item);
+	}
+
+	public ArrayList<MenuItem> getMenu() {
+		return menu;
 	}
 }

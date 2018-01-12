@@ -4,8 +4,8 @@ import java.util.Iterator;
 
 public class DinnerMenuIterator implements Iterator{
 
-	MenuItem[] items;
-	int position = 0;
+	private MenuItem[] items;
+	private int position = 0;
 	
 	public DinnerMenuIterator(MenuItem[] menu){
 		this.items = menu;
