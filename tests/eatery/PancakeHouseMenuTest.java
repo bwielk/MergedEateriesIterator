@@ -7,17 +7,17 @@ import org.junit.Test;
 
 public class PancakeHouseMenuTest {
 
-	PancakeHouseMenu pancakeHouse;
+	PancakeHouseMenu pancakeMenu;
 	
 	@Before
 	public void before(){
-		pancakeHouse = new PancakeHouseMenu();
+		pancakeMenu = new PancakeHouseMenu();
 	}
 	
 	@Test
 	public void menuHasMeals() {
-		assertEquals(3, pancakeHouse.getMenu().size());
-		pancakeHouse.addItem("xxx", "yyy", true, 3.00);
-		assertEquals(4, pancakeHouse.getMenu().size());
+		assertEquals(3, pancakeMenu.getMenu().size());
+		pancakeMenu.addItem("xxx", "yyy", true, 3.00);
+		assertEquals(4, pancakeMenu.getMenu().size());
 	}
 }
