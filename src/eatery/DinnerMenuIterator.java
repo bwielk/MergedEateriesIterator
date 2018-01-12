@@ -1,7 +1,5 @@
 package eatery;
 
-import java.util.Iterator;
-
 public class DinnerMenuIterator implements Iterator{
 
 	private MenuItem[] items;
