@@ -2,13 +2,14 @@ package eatery;
 
 import static org.junit.Assert.*;
 
+import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 
 public class DinnerMenuIteratorTest{
 	
-	private DinnerMenuIterator dinnerMenuIterator;
-	private DinnerMenu dinnerMenu;
+	private Iterator dinnerMenuIterator;
+	private Menu dinnerMenu;
 
 	@Before
 	public void before(){

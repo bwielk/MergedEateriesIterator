@@ -1,13 +1,15 @@
 package eatery;
 
+import java.util.Iterator;
+
 public class Waitress {
 	
-	private PancakeHouseMenu pancakeHouseMenu;
-	private DinnerMenu dinnerMenu;
+	private Menu pancakeHouseMenu;
+	private Menu dinnerMenu;
 	private int dinnerItemsNumber;
 	private int pancakesItemsNumber;
 	
-	public Waitress(PancakeHouseMenu pancakeMenu, DinnerMenu dinnerMenu){
+	public Waitress(Menu pancakeMenu, Menu dinnerMenu){
 		this.pancakeHouseMenu = pancakeMenu;
 		this.dinnerMenu = dinnerMenu;
 	}

@@ -1,6 +1,8 @@
 package eatery;
 
-public class DinnerMenu {
+import java.util.Iterator;
+
+public class DinnerMenu implements Menu{
 	
 	static final int MAX_ITEMS = 6;
 	private MenuItem[] menu;
@@ -13,7 +15,7 @@ public class DinnerMenu {
 		addItem("Penne with tomato sauce", "Penne with Italian style sauce", true, 15.00);
 	}
 	
-	public DinnerMenuIterator createIterator(){
+	public Iterator createIterator(){
 		return new DinnerMenuIterator(menu);
 	}
 

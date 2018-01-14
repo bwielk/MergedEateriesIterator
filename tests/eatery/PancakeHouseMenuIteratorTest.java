@@ -2,13 +2,15 @@ package eatery;
 
 import static org.junit.Assert.*;
 
+import java.util.Iterator;
+
 import org.junit.Before;
 import org.junit.Test;
 
 public class PancakeHouseMenuIteratorTest {
 	
-	private PancakeHouseMenu pancakeMenu;
-	private PancakeHouseMenuIterator pancakeHouseIterator;
+	private Menu pancakeMenu;
+	private Iterator pancakeHouseIterator;
 	
 	@Before
 	public void before(){
