@@ -10,12 +10,14 @@ public class WaitressTest {
 	private Waitress waitress;
 	private PancakeHouseMenu pancakes;
 	private DinnerMenu dinner;
+	private CafeMenu cafe;
 	
 	@Before
 	public void before(){
 		pancakes = new PancakeHouseMenu();
 		dinner = new DinnerMenu();
-		waitress = new Waitress(pancakes, dinner);
+		cafe = new CafeMenu();
+		waitress = new Waitress(pancakes, dinner, cafe);
 	}
 	
 	@Test
@@ -43,5 +45,15 @@ public class WaitressTest {
 		pancakes.addItem("Pancakes with nutella", "super sweet breakie", true, 4.00);
 		waitress.updateKnowledge();
 		assertEquals(7, waitress.getNumberOfPancakeHouseItems());
+	}
+	
+	@Test
+	public void waitressKnowsHowManyItemsAreInTheCafeMenu(){
+		waitress.updateKnowledge();
+		assertEquals(3, waitress.getNumberOfCafeItems());
+		cafe.addItem("Coffee", "Fresh ground coffeee", true, 1.00);
+		cafe.addItem("Cappucino", "Classic Italian coffee", true, 1.20);
+		waitress.updateKnowledge();
+		assertEquals(5, waitress.getNumberOfCafeItems());
 	}
 }
